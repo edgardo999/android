@@ -1,9 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/git'
-  args: ['clone', 'https://github.com/edgardo999/android']
-- name: 'gcr.io/cloud-builders/gradle'
-  args: ['assembleRelease']
-artifacts:
-  objects:
-    location: 'gs://$PROJECT_ID-cloudbuild-artifacts/'
-    paths: ['app/build/outputs/apk/release/*.apk']
